@@ -1,0 +1,21 @@
+{
+  "name": "hono-vercel-app",
+  "version": "1.0.0",
+  "description": "Hono app with Swagger, Auth, and Debug features on Vercel",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for Vercel'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "hono": "^4.10.3",
+    "mongodb": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3",
+    "vercel": "^33.0.0"
+  }
+}
