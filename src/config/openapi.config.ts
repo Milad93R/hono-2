@@ -15,7 +15,7 @@ export const openAPISpec = {
       description: 'Production server (Deployment)',
     },
     {
-      url: 'http://localhost:3000',
+      url: 'http://localhost:3072',
       description: 'Development server',
     },
   ],

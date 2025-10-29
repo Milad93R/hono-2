@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { Bindings, Variables } from './types/index.js'
+import { corsMiddleware } from './middleware/cors.middleware.js'
 import { apiKeyAuth } from './middleware/auth.middleware.js'
 import { logCapture } from './middleware/debug.middleware.js'
 import { monitoring } from './middleware/monitoring.middleware.js'
@@ -10,6 +11,7 @@ import { registerRoutes } from './routes/index.js'
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
 
 // Global middleware
+app.use('*', corsMiddleware)
 app.use('*', logCapture)
 app.use('*', monitoring)
 app.use('*', apiKeyAuth)

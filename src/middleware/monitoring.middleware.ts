@@ -9,13 +9,16 @@ export const monitoring = async (c: Context<{ Bindings: Bindings; Variables: Var
   const duration = Date.now() - startTime
   
   // Log request metrics
-  console.log(JSON.stringify({
+  const logData = {
     timestamp: new Date().toISOString(),
     method: c.req.method,
     path: c.req.path,
     status: c.res.status,
     duration: `${duration}ms`,
-    userAgent: c.req.header('user-agent')
-  }))
+    userAgent: c.req.header('user-agent'),
+    ip: c.req.header('X-Forwarded-For') || c.req.header('X-Real-IP') || 'Unknown'
+  }
+  
+  console.log(JSON.stringify(logData))
 }
 

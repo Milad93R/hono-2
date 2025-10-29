@@ -33,6 +33,10 @@ export class DocsController {
             window.ui = SwaggerUIBundle({
               dom_id: '#swagger-ui',
               url: '/openapi.json',
+              persistAuthorization: true,
+              deepLinking: true,
+              displayRequestDuration: true,
+              filter: true,
             })
           }
         </script>
