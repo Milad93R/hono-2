@@ -20,9 +20,9 @@
 
 ## 🔗 Live Demo
 
-- **Production App**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app
-- **Swagger Docs**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app/docs
-- **OpenAPI Spec**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app/openapi.json
+- **Production App**: https://hono-2-lovat.vercel.app
+- **Swagger Docs**: https://hono-2-lovat.vercel.app/docs
+- **OpenAPI Spec**: https://hono-2-lovat.vercel.app/openapi.json
 
 ## 📦 Installation
 

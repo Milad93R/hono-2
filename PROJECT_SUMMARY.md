@@ -6,8 +6,8 @@ A production-ready REST API built with **Hono** framework deployed on **Vercel**
 ## 🚀 Deployment Status
 - **Status**: ✅ **FULLY OPERATIONAL**
 - **Platform**: Vercel Serverless
-- **Production URL**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app
-- **Documentation**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app/docs
+- **Production URL**: https://hono-2-lovat.vercel.app
+- **Documentation**: https://hono-2-lovat.vercel.app/docs
 
 ## 🔧 Technology Stack
 
@@ -326,8 +326,8 @@ All requested features have been implemented, tested, and verified:
 
 ## 🔗 Quick Links
 
-- **Production App**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app
-- **Swagger Docs**: https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app/docs
+- **Production App**: https://hono-2-lovat.vercel.app
+- **Swagger Docs**: https://hono-2-lovat.vercel.app/docs
 - **Vercel Dashboard**: https://vercel.com/mrashidikhah-3181s-projects/hono-2
 - **GitHub Repository**: https://github.com/Milad93R/hono-2
 
