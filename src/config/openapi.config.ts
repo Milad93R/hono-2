@@ -7,8 +7,12 @@ export const openAPISpec = {
   },
   servers: [
     {
-      url: 'https://hono-2-ehf3kjgbl-mrashidikhah-3181s-projects.vercel.app',
-      description: 'Production server',
+      url: 'https://hono-2-lovat.vercel.app',
+      description: 'Production server (Primary)',
+    },
+    {
+      url: 'https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app',
+      description: 'Production server (Deployment)',
     },
     {
       url: 'http://localhost:3000',
