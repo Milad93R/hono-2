@@ -1,6 +1,6 @@
 import { Context } from 'hono'
 import { Bindings, Variables } from '../types/index.js'
-import { openAPISpec } from '../config/openapi.config.js'
+import { getOpenAPISpec } from '../config/openapi.config.js'
 
 export class DocsController {
   /**
@@ -8,7 +8,7 @@ export class DocsController {
    * Returns OpenAPI specification
    */
   async getOpenAPISpec(c: Context<{ Bindings: Bindings; Variables: Variables }>) {
-    return c.json(openAPISpec)
+    return c.json(getOpenAPISpec())
   }
 
   /**

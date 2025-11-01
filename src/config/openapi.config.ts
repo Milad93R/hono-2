@@ -1,11 +1,7 @@
-export const openAPISpec = {
-  openapi: '3.0.0',
-  info: {
-    title: 'Hono Vercel API',
-    version: '1.0.0',
-    description: 'A production-ready API built with Hono on Vercel with monitoring, error handling, and Swagger documentation.',
-  },
-  servers: [
+export const getOpenAPISpec = () => {
+  const customDomain = process.env.CUSTOM_DOMAIN?.trim()
+  
+  const servers = [
     {
       url: 'https://hono-2-lovat.vercel.app',
       description: 'Production server (Primary)',
@@ -14,11 +10,30 @@ export const openAPISpec = {
       url: 'https://hono-2-9henz8z2w-mrashidikhah-3181s-projects.vercel.app',
       description: 'Production server (Deployment)',
     },
-    {
-      url: 'http://localhost:3072',
-      description: 'Development server',
+  ]
+  
+  // Add custom domain if configured
+  if (customDomain) {
+    servers.unshift({
+      url: `https://${customDomain}`,
+      description: 'Custom domain',
+    })
+  }
+  
+  // Add development server
+  servers.push({
+    url: 'http://localhost:3072',
+    description: 'Development server',
+  })
+
+  return {
+    openapi: '3.0.0',
+    info: {
+      title: 'Hono Vercel API',
+      version: '1.0.0',
+      description: 'A production-ready API built with Hono on Vercel with monitoring, error handling, and Swagger documentation.',
     },
-  ],
+    servers,
   tags: [
     { name: 'General', description: 'General informational endpoints' },
     { name: 'Testing', description: 'Endpoints used for testing and debugging' },
@@ -566,5 +581,6 @@ export const openAPISpec = {
       }
     },
   },
+  }
 }
 

@@ -6,6 +6,7 @@ import { TelegramController } from '../controllers/telegram.controller.js'
 import { MongoDBController } from '../controllers/mongodb.controller.js'
 import { withDebugLogs } from '../middleware/debug.middleware.js'
 import { swaggerAuth } from '../middleware/auth.middleware.js'
+import { logger } from '../utils/logger.js'
 
 export function registerRoutes(app: Hono<{ Bindings: Bindings; Variables: Variables }>) {
   // Initialize controllers
@@ -16,6 +17,7 @@ export function registerRoutes(app: Hono<{ Bindings: Bindings; Variables: Variab
 
   // Root endpoint
   app.get('/', (c) => {
+    logger.telegram('INFO', 'Root endpoint accessed')
     return c.json({ 
       message: 'Hello from Hono on Vercel!',
       timestamp: new Date().toISOString(),
